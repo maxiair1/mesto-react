@@ -1,5 +1,4 @@
 import React, {useState, useEffect} from 'react';
-import avatar from '../images/profile_avatar.jpg'
 import {api} from '../utils/Api.js';
 import Card from "./Card.js";
 
