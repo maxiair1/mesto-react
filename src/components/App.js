@@ -59,7 +59,8 @@ function App() {
                 {isEditProfilePopupOpen && <PopupWithForm
                     name={"profile-edit"}
                     title={"Редактировать профиль"}
-                    onClose={closeAllPopups}>
+                    onClose={closeAllPopups}
+                    buttonText={'Сохранить'}>
                     <label className="popup__label">
                         <input id="profile-name" type="text" name="profile-name"  placeholder="Имя"
                                className="popup__input popup__input_field_name" required minLength="2" maxLength="40"/>
@@ -75,7 +76,9 @@ function App() {
                 {isAddPlacePopupOpen && <PopupWithForm
                     name={"card-add"}
                     title={"Новое место"}
-                    onClose={closeAllPopups}>
+                    onClose={closeAllPopups}
+                    buttonText={'Сохранить'}>
+
                     <label className="popup__label">
                         <input id="card-name" type="text" name="addCard-name"  placeholder="Название"
                                className="popup__input popup__input_field_name" required minLength="2"
@@ -92,7 +95,9 @@ function App() {
                 {isEditAvatarPopupOpen && <PopupWithForm
                     name={"profile-avatar"}
                     title={"Обновить аватар?"}
-                    onClose={closeAllPopups}>
+                    onClose={closeAllPopups}
+                    buttonText={'Сохранить'}>
+
                     <label className="popup__label">
                         <input id="avatar-link" type="url" name="addAvatar-link"
                                placeholder="Ссылка на картинку"
