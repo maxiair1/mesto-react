@@ -67,9 +67,9 @@ function Main({onEditAvatar, onEditProfile, onAddPlace, onCardClick}) {
                 {isCardsLoading && <span >Карточки загружаются...</span>}
 
                 {
-                    cards.map(card => {
-                        return (<Card card={card} onCardClick={onCardClick} key={card._id}/>)
-                    })
+                    cards.map(card =>
+                        (<Card card={card} onCardClick={onCardClick} key={card._id}/>)
+                    )
                 }
             </section>
         </main>
