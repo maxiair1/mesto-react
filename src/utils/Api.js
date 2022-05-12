@@ -60,20 +60,22 @@ class Api {
 
   }
 
-  addLike(id) {
-    //PUT https://mesto.nomoreparties.co/v1/cohortId/cards/cardId/likes
-    return this._makeNewFetch(`${this.settings.baseUrl}/cards/${id}/likes`, {
-      method: "PUT",
-      headers: this.settings.headers
-    })
+  changeLikeCardStatus(id,isLiked){
+    if(!isLiked){
+      //DELETE https://mesto.nomoreparties.co/v1/cohortId/cards/cardId/likes
+      return this._makeNewFetch(`${this.settings.baseUrl}/cards/${id}/likes`, {
+        method: "DELETE",
+        headers: this.settings.headers
+      })
+    } else {
+      //PUT https://mesto.nomoreparties.co/v1/cohortId/cards/cardId/likes
+      return this._makeNewFetch(`${this.settings.baseUrl}/cards/${id}/likes`, {
+        method: "PUT",
+        headers: this.settings.headers
+      })
+    }
   }
-  deleteLike(id) {
-    //DELETE https://mesto.nomoreparties.co/v1/cohortId/cards/cardId/likes
-    return this._makeNewFetch(`${this.settings.baseUrl}/cards/${id}/likes`, {
-      method: "DELETE",
-      headers: this.settings.headers
-    })
-  }
+
 }
 
 export const api = new Api({
