@@ -25,7 +25,6 @@ function Main(props) {
             </section>
             <section className="elements page__adaptive page__elements">
                 {props.isCardsLoading && <span>Карточки загружаются...</span>}
-
                 {
                     props.cards.map(card =>
                         (<Card card={card} onCardClick={props.onCardClick} onCardLike={props.onCardLike}

@@ -40,7 +40,6 @@ function Card(props) {
                                 className={cardLikeButtonClassName} onClick={handleLikeClick}></button>
                         <span className="element__heart-count">{props.card.likes.length}</span>
                     </div>
-
                 </div>
                 <button type="button" name="button-trash" aria-label="Удалить" className={cardDeleteButtonClassName}
                         onClick={handleDeleteClick}></button>
