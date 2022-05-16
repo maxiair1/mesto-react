@@ -144,7 +144,7 @@ function App() {
                     />}
                     {isEditAvatarPopupOpen && <EditAvatarPopup isOpen={isEditAvatarPopupOpen} onClose={closeAllPopups}
                                                                onUpdateAvatar={handleUpdateAvatar}/>}
-                    {isOpen && <ImagePopup card={selectedCard} onClose={closeAllPopups} isOpen={isOpen}/>}
+                    <ImagePopup card={selectedCard} onClose={closeAllPopups} isOpen={isOpen}/>
                 </div>
             </div>
         </CurrentUserContext.Provider>
